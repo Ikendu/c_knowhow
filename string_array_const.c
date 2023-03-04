@@ -39,5 +39,13 @@ Learning string array with pointer functions
 
          printf("%s", str3);
 
+         printf("\n \n");
+
+         for (i = 0; str3[i]; i++)
+             str3[i] = str1[i];
+             str3[i] = '\0';
+
+             printf("%s", str3);
+
          return 0;
  }
