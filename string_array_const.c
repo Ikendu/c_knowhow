@@ -10,7 +10,7 @@ Learning string array with pointer functions
                      'c', 'o', 'n', 's', 't', 'a', 'n', 't', ' ',
                      'a', 'r', 'r', 'a', 'y', 's', '\0'};
          char str2[] = "Another character string";
-         char *ptr_str;
+         char *ptr_str = "Assign a string to a pointer.";
          int i;
 
          for (i = 0; str1[i]; i++)
@@ -23,11 +23,21 @@ Learning string array with pointer functions
          printf("The length of str2 is %d ", strlen(str2));
          printf("\n \n");
 
-         ptr_str = "Assign a string to a pointer.";
+
 
          for (i = 0; *ptr_str; i++)
          printf("%c ", *ptr_str++);
+         printf("\n");
+
+         printf("%d", strlen(ptr_str));
+
          printf("\n \n");
 
-         printf("%p ", ptr_str);
+         char str3[] = {};
+
+         strcpy(str3, str2);
+
+         printf("%s", str3);
+
+         return 0;
  }
