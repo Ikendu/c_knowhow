@@ -2,16 +2,23 @@
 
 main()
 {
-       char str[30];
-       int i, delt = 97 - 65;
+       char str[100];
+       int i, delt = 'a' - 'A';
 
        printf("Enter a line of alphabets lass that 30 \n");
        gets(str);
 
        for (i = 0; str[i]; ++i)
        {
-               if((str[i] >= 97) && (str[i] <= 122))
-               str[i] -= delt;
+               if((str[i] >= 'a') && (str[i] <= 'z'))
+               {
+                          str[i] -= delt;
+               }
+               else{
+                           str[i] += delt;
+               }
+
+
        }
        printf("The uppercase of the entered chars are \n");
        puts(str);

@@ -19,6 +19,7 @@ Learning string array with pointer functions
 
          for (i=0; str2[i]; i++)
          printf("%c ", str2[i]);
+         
          printf("\n");
          printf("The length of str2 is %d ", strlen(str2));
          printf("\n \n");
