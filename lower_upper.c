@@ -15,7 +15,7 @@ main()
                           str[i] -= delt;
                }
                else{
-                           str[i] += delt;
+                          str[i] += delt;
                }
 
 
