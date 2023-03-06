@@ -17,10 +17,17 @@ main()
                else{
                           str[i] += delt;
                }
-
-
        }
-       printf("The uppercase of the entered chars are \n");
+       if (str[i] <= 96)
+       {
+               printf("The uppercase of the entered chars are \n");
+       }
+       else
+       {
+               printf("The lowercase of the entered chars are \n");
+       }
+
+
        puts(str);
         return 0;
 }

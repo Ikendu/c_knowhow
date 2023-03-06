@@ -2,12 +2,14 @@
 
 main()
 {
-        int x, y;
+        int x, y, ad;
         float xy;
         char z[90];
 
         printf("Enter two figures \n");
         scanf("%d %d", &x, &y);
+         ad = x + y;
+
 
         printf("Enter a decimal point number \n");
         scanf("%f", &xy);
@@ -28,7 +30,9 @@ main()
 
         printf("The details entered are as follows \n");
 
-        printf("\n %d %d \n %f \n %s", x, y, xy, z);
+        printf("\n %d %d \n %f \n %s \n", x, y, xy, z);
+
+        printf("th addition of the two digits is %d\n", ad);
 
         return 0;
 
