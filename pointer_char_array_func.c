@@ -3,14 +3,17 @@
 char array_func(char *str2);
 char array_func2(char **str3, int size);
 
-main()
+int main()
 {
-	char *str[] = {"I am comming soon",
- 	     	     "I will surely be there",
-		      "software engineering here i come",
-		      "I will be the best"};
+	char *str[] = {"Monday",
+ 	     	     "Tuesday",
+		      "Wednesday",
+		      "Thursday",
+                      "Friday",
+                      "Saturday",
+                      "Sunday"};
 
-        int i, size = 4;
+        int i, size = 7;
 
         for ( i = 0; i < size; i++)
 	array_func(str[i]);

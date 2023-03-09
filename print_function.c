@@ -4,7 +4,7 @@ char printcar(char *str);
 
 main()
 {
-	char stringer[] = "I love my wife so much";
+	char stringer[] = {"I love my wife so much"};
 
 	char *pts_str;
 	pts_str = stringer;
@@ -16,6 +16,7 @@ main()
 
 	return (0);
 }
+
 char printcar(char *str)
 {
 	printf("%s\n", str);
