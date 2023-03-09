@@ -6,9 +6,9 @@ void pass_char(char *chara);
 
 main()
 {
-	int list[6] = {4, 5, 2, 1, 8, 10};
+	int list[] = {4, 5, 2, 1, 8, 10};
 	int *ptr_digit;
-	ptr_digit = list;
+	ptr_digit = &list[0];
 
 	pass_digit(list, 6);
 	pass_digit(ptr_digit, 6);
