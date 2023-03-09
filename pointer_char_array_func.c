@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+char array_func(char *str2);
+char array_func2(char **str3, int size);
+
+main()
+{
+	char *str[] = {"I am comming soon",
+ 	     	     "I will surely be there",
+		      "software engineering here i come",
+		      "I will be the best"};
+
+        int i, size = 4;
+
+        for ( i = 0; i < size; i++)
+	array_func(str[i]);
+
+	array_func2(str, size);
+
+        return (0);
+}
+char array_func(char *str1)
+{
+         printf("%s\n", str1);
+}
+
+
+
+char array_func2(char **str3, int size)
+{
+     int i;
+     
+     for (i = 0; i < size; i++)
+     	 printf("%s\n", str3[i]);
+}
+
