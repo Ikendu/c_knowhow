@@ -30,7 +30,7 @@ int main()
 
                 for (i = 0; i < 5; i++)
                 {
-                        ptr_str = realloc(ptr_str, (strlen(str[0]) + 1) * sizeof(char));
+                        ptr_str = realloc(ptr_str, (strlen(str[i]) + 1) * sizeof(char));
                         if(ptr_str == NULL)
                         {
                                 printf("The realloc function failed \n");
