@@ -15,12 +15,13 @@ int main()
                 printf("Enter a number to get the multiplication Table \n");
                 scanf("%d", &num);
                 ptr_num = malloc(num * num * sizeof(int));
+                //ptr_num = calloc(num, num * sizeof(int));
 
                 if (ptr_num != NULL)
                 {
                         multiplyFunc(num, ptr_num);
                         showTable(num, ptr_num);
-                        
+                        free(ptr_num);
                 }
                 else
                 {
