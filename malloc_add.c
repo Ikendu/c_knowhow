@@ -17,15 +17,13 @@ int main()
         else
         {
                 for (i = 0; i < num; i++)
-                {
                         ptr_num[i] = i + 1;
+                        
                         printf("%d \n", ptr_num[i]);
-                }
         }
         for (i = 0; i < num; i++)
-        {
                 sum += ptr_num[i];
-        }
+
         printf("The sum is: %d \n", sum);
         free(ptr_num);
         return end;

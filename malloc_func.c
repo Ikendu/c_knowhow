@@ -10,7 +10,7 @@ int main()
         char *ptr_str;
         int result;
 
-        ptr_str = (char *)malloc(strlen(str) + 1);
+        ptr_str = malloc(strlen(str) + 1);
         // ptr_str = '\0';
 
         if (ptr_str != NULL)
