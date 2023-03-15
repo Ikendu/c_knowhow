@@ -8,9 +8,10 @@ int main(int argc, char *argv[])
 
                 if(argc > 1)
                 {
+                        printf("The arguments are: \n");
                         for(count = 1; count < argc; count++)
                         {
-                                  printf("The arguments ars \"%s\" ", argv[count]);
+                                  printf("\"%s\"\n" , argv[count]);
                         }
 
                 }
