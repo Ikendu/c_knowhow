@@ -5,7 +5,6 @@
 enum constants{COUNT = 4, DELT = 'a' - 'A'};
 typedef char *STRING[COUNT];
 typedef char *PTR_STR;
-typedef char CHAR;
 typedef int INTEGER;
 
 void convert(PTR_STR str1, PTR_STR str2);
@@ -22,7 +21,7 @@ int main()
 
         for (i = 0; i < COUNT; i++)
         {
-                str[i] = malloc((strlen(song[i]) + 1) * sizeof(CHAR));
+                str[i] = malloc((strlen(song[i]) + 1) * sizeof(char));
                 if (str[i] == NULL)
                         printf("error malloc function \n");
                         end = 1;
@@ -30,7 +29,7 @@ int main()
         printf("%s \n", song[i]);
         }
         printf("\n");
-        
+
         for (i = 0; i < COUNT; i++)
             printf("%s \n", str[i]);
         return (end);
