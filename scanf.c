@@ -20,6 +20,7 @@ main()
         int i, convt = 'a' - 'A';
 
         i = 0;
+        
         while(z[i])
         {
                 if((z[i] >= 'a') && (z[i] <= 'z'))
