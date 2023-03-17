@@ -9,22 +9,34 @@ int main()
                 char make;
                 int engine_power;
                 float weight;
-                char model;
         } merc, ikenga, ikendu, benz;
 
+        struct automobile info = {
+                1990,
+                "mk2020",
+                8500,
+                1500
+        };
+        printf("The initial values for directions: \n");
+        printf("Year: %d \n", info.year);
+        printf("Car make: %s \n", info.make);
+        printf("car Engine power: %d \n", info.engine_power);
+        printf("weight: %.2f \n\n", info.weight);
+
+
         printf("Which year did you bought Ikendu car?\n");
-        scanf("%d", &ikendu.year);
+          scanf("%d", &ikendu.year);
         printf("What is the make?\n");
-        scanf("%s", &ikendu.make);
+          scanf("%s", &ikendu.make);
         printf("What is the weight of the car?\n");
-        scanf("%.2f", &ikendu.weight);
-        printf("What are the model?\n");
-            scanf("%s", &ikendu.model);
+          scanf("%.2f", &ikendu.weight);
 
         printf("The details of your car are: \n");
+
         printf("Year: %d\n", ikendu.year);
         printf("Make: %s\n", ikendu.make);
         printf("Weight: %.2f\n", ikendu.weight);
-        printf("Model available: %s\n");
-            printf("%s", ikendu.model);
+
+
+            return (0);
 }
