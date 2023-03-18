@@ -51,27 +51,28 @@ void infoDisplay(SP *ptr)
 }
 void getInfo(SP *ptr)
 {
-        printf("Enter your details here: \n");
+        printf("\n Enter your details here: \n");
         printf("Name: \n");
-        getc(ptr->name);
+        gets(ptr->name);
         printf("ID: \n");
-        getc(ptr->d.id);
+        gets(ptr->d.id);
         printf("Department: \n");
-        getc(ptr->d.dept);
+        gets(ptr->d.dept);
         printf("Position: \n");
-        getc(ptr->d.position);
+        gets(ptr->d.position);
         printf("Course Studied: \n");
-        getc(ptr->course);
+        gets(ptr->course);
         printf("Phone: \n");
-        getc(ptr->phone);
+        gets(ptr->phone);
 }
 void showInfo(SP *ptr)
 {
-        printf("\n Confirm the details you have entered below\n");
-        printf("Name: %s ", ptr->name);
-        printf("Office ID: %s ", ptr->d.id);
-        printf("Department: %s ", ptr->d.dept);
-        printf("Position: %s ", ptr->d.position);
-        pr
+        printf("\n Confirm the details you have entered below\n\n");
+        printf(" Name: %s \n", ptr->name);
+        printf(" Office ID: %s \n", ptr->d.id);
+        printf(" Department: %s \n", ptr->d.dept);
+        printf(" Position: %s \n", ptr->d.position);
+        printf(" Phone: %s \n", ptr->phone);
+        printf(" Course Studied: %s \n", ptr->course);
 
 }
