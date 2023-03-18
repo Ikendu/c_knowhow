@@ -35,8 +35,6 @@ int main(void)
 
         printf("The details of your car are: \n");
 
-        structfunc(model);
-
         printf("Year: %d\n", model.year);
         printf("Make: %s\n", model.make);
         printf("Cost: $%0.2f\n", model.cost);

@@ -16,7 +16,7 @@ struct automobile{
 
 typedef struct automobile STA;
 
-STA structfunc(STA *ptr);
+ structfunc(STA *ptr);
 
 int main(void)
 {
@@ -30,8 +30,8 @@ int main(void)
 
         structfunc(&model);
 
-        printf("The details of your car are: \n");
-        
+        printf("\n The details of your car are: \n");
+
         printf("Year: %d\n", model.year);
         printf("Make: %s\n", model.make);
         printf("Cost: $%0.2f\n", model.cost);
@@ -40,18 +40,18 @@ int main(void)
 
             return (0);
 }
-STA structfunc(STA *ptr)
+ structfunc(STA *ptr)
 {
-        //s = *ptr;
+        //s = &(*ptr);
 
          printf("Which year did you bought Ikendu car?\n");
           scanf("%d", &(*ptr).year);
         printf("What is the make?\n");
-          scanf("%s", &(*ptr).make);
+          scanf("%s", &ptr -> make);
         printf("What is the cost of the car?\n");
           scanf("%f", &(*ptr).cost);
         printf("What is the EngPower of the car?\n");
-          scanf("%d", &(*ptr).engine_power);
+          scanf("%d", &ptr -> engine_power);
 
-        return (*ptr);
+        //return (*ptr);
 }
