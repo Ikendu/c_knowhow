@@ -74,5 +74,4 @@ void showInfo(SP *ptr)
         printf(" Position: %s \n", ptr->d.position);
         printf(" Phone: %s \n", ptr->phone);
         printf(" Course Studied: %s \n", ptr->course);
-
 }
