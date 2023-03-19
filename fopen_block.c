@@ -2,7 +2,7 @@
 
 void writeBlock(FILE *fin, FILE *fout);
 
-int err(int err);
+int err(char *str);
 
 int main()
 {
@@ -29,4 +29,14 @@ void writeBlock(FILE *fin, FILE *fout)
 {
         int num;
         max = 100;
+        char buff[max + 1];
+
+        while (!feof(fin))
+        {
+                num = fread(buff, sizeof(char), max, fin);
+                buff[num * sizeof(char)] = '\0';
+                printf("%s", buff);
+                fwrite(buff, sizeof(char), num, fout);
+        }
+
 }
