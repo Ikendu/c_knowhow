@@ -19,7 +19,14 @@ int main()
                 printf("The 2nd fopen function failed \n");
                 end = 1;
         }
+        writeBlock( ptrf1, ptrf2);
+
         fclose(ptrf1);
         fclose(ptrf2);
         return (end);
+}
+void writeBlock(FILE *fin, FILE *fout)
+{
+        int num;
+        max = 100;
 }
