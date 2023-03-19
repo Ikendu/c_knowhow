@@ -6,22 +6,22 @@ int main()
         FILE *fptr1, *fptr2;
         int end = 0;
 
-        char filen[] = "text2.txt";
+        char filen2[] = "text2.txt";
         char filen1[] = "text.txt";
 
-        if ((fptr1 = fopen(filen, "w")) == NULL)
+        if ((fptr2 = fopen(filen2, "w")) == NULL)
         {
                 printf("fopen function failed \n");
                 end = 1;
         }
-        else if ((fptr2 = fopen(filen1, "r")) == NULL)
+        else if ((fptr1 = fopen(filen1, "r")) == NULL)
         {
                 printf("fopen II function failed \n");
                 end = 1;
         }
         else
         {
-                readWrite(fptr2, fptr1);
+                readWrite(fptr1, fptr2);
                 fclose(fptr1);
                 fclose(fptr2);
         }
