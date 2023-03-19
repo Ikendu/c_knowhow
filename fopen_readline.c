@@ -19,7 +19,7 @@ int main()
         }
         else
         {
-                lineRead(ftp1, ftp2);
+                lineRead(ftp2, ftp1);
                 fclose(ftp1);
                 fclose(ftp2);
         }
@@ -32,9 +32,9 @@ void lineRead(FILE *pf1, FILE *pf2)
         int max = 81;
         int buff[max];
 
-        while (fgets(buff, max, pf1) != EOF)
+        while (fgets(buff, max, pf1) != NULL)
         {
                 fputs(buff, pf2);
-                printf("%s \n", buff);
+                printf("%s ", buff);
         }
 }
