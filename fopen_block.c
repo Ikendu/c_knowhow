@@ -9,15 +9,17 @@ int main()
         FILE *ptrf1, *ptrf2;
         int end = 0;
 
-        if ((ptrf1 = fopen("text.txt", "w")) == NULL)
+        char filename1[] = "text.txt";
+        char filename2[] = "text2.txt";
+
+
+        if ((ptrf1 = fopen(filename1, "r")) == NULL)
         {
-                printf("The fopen did not succeed \n");
-                end = 1
+                end = err(filename1);
         }
-        else if ((ptf2 = fopen("text1.txt", "r")) == NULL)
+        else if ((ptrf2 = fopen(filename2, "w")) == NULL)
         {
-                printf("The 2nd fopen function failed \n");
-                end = 1;
+                end = err(filename2);
         }
         writeBlock( ptrf1, ptrf2);
 
@@ -28,7 +30,7 @@ int main()
 void writeBlock(FILE *fin, FILE *fout)
 {
         int num;
-        max = 100;
+        int max = 100;
         char buff[max + 1];
 
         while (!feof(fin))
@@ -39,4 +41,9 @@ void writeBlock(FILE *fin, FILE *fout)
                 fwrite(buff, sizeof(char), num, fout);
         }
 
+}
+int err(char *str)
+{
+        printf("The 2nd fopen function failed \n");
+        int end = 1;
 }
