@@ -5,7 +5,7 @@ void lineRead(FILE *pf1, FILE *pf2);
 int main()
 {
         FILE *ftp1, *ftp2;
-        end = 0;
+        int end = 0;
 
         if ((ftp1 = fopen("text1.txt", "w")) == NULL)
         {
@@ -22,5 +22,19 @@ int main()
                 lineRead(ftp1, ftp2);
                 fclose(ftp1);
                 fclose(ftp2);
+        }
+
+        return end;
+}
+
+void lineRead(FILE *pf1, FILE *pf2)
+{
+        int max = 81;
+        int buff[max];
+
+        while (fgets(buff, max, pf1) != EOF)
+        {
+                fputs(buff, pf2);
+                printf("%s \n", buff);
         }
 }
