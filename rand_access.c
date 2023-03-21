@@ -45,3 +45,10 @@ void ptrSeek(FILE *fptr)
         fseek(fptr, offset3, SEEK_SET);
         readData(fptr);
 }
+long ptrTell(FILE *fptr)
+{
+        long end;
+
+        end = ftell(Fptr);
+        printf("")
+}
