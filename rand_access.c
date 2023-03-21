@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-enum {SUCCESS, FAIL, MAX = 81};
+enum {SUCCESS, FAIL, MAX = 80};
 
 void ptrSeek(FILE *fptr);
 long ptrTell(FILE *fprt);
 void readData(FILE *fptr);
-int errMsg(char str);
+int errMsg(char *str);
 
 int main()
 {
@@ -29,34 +29,42 @@ void ptrSeek(FILE *fptr)
 
         offset1 = ptrTell(fptr);
         readData(fptr);
+
         offset2 = ptrTell(fptr);
         readData(fptr);
+
         offset3 = ptrTell(fptr);
         readData(fptr);
 
         printf("\n Points to consider \n");
 
-        fseek(fptr, offset1, SEEK_SET);
+        fseek(fptr, offset3, SEEK_SET);
         readData(fptr);
 
         fseek(fptr, offset2, SEEK_SET);
         readData(fptr);
 
-        fseek(fptr, offset3, SEEK_SET);
+        fseek(fptr, offset1, SEEK_SET);
         readData(fptr);
 }
 long ptrTell(FILE *fptr)
 {
         long end;
 
-        end = ftell(Fptr);
+        end = ftell(fptr);
         printf(" The position is at %ld \n", end);
 
         return end;
 }
 void readData(FILE *fptr)
 {
-        char buff(MAX);
+        char buff[MAX];
 
-        fget(buff, MA)
+        fgets(buff, MAX, fptr);
+        printf(" _____%s \n", buff);
+}
+int errMsg(char *str)
+{
+        printf(" The random access failed \n");
+        return FAIL;
 }
