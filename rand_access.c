@@ -50,5 +50,13 @@ long ptrTell(FILE *fptr)
         long end;
 
         end = ftell(Fptr);
-        printf("")
+        printf(" The position is at %ld \n", end);
+
+        return end;
+}
+void readData(FILE *fptr)
+{
+        char buff(MAX);
+
+        fget(buff, MA)
 }
