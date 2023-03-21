@@ -25,5 +25,23 @@ int main()
 }
 void ptrSeek(FILE *fptr)
 {
-        
+        long offset1, offset2, offset3;
+
+        offset1 = ptrTell(fptr);
+        readData(fptr);
+        offset2 = ptrTell(fptr);
+        readData(fptr);
+        offset3 = ptrTell(fptr);
+        readData(fptr);
+
+        printf("\n Points to consider \n");
+
+        fseek(fptr, offset1, SEEK_SET);
+        readData(fptr);
+
+        fseek(fptr, offset2, SEEK_SET);
+        readData(fptr);
+
+        fseek(fptr, offset3, SEEK_SET);
+        readData(fptr);
 }
