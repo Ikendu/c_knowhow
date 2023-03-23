@@ -15,9 +15,15 @@ void mult(int a, int b)
 
 int main()
 {
+        int op, a = 10, b = 5;
         void(*ptr_calc[])(int, int) = {add, sub, mult};
 
-        Printf("Enter operator, 0 for add, 1 for sub, 2 for mult");
+        printf("Enter operator, 0 for add, 1 for sub, 2 for mult");
         scanf("%d", &op);
-        
+
+        if (op < 2)
+        return 0;
+
+        ptr_calc[op](a, b);
+
 }
