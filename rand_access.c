@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-enum {SUCCESS, FAIL, MAX = 80};
+enum {SUCCESS, FAIL, MAX = 50};
 
 void ptrSeek(FILE *fptr);
 long ptrTell(FILE *fprt);
@@ -17,7 +17,8 @@ int main()
         {
                 end = errMsg(filename);
         }
-        else{
+        else
+        {
                 ptrSeek(fptr);
                 fclose(fptr);
         }
