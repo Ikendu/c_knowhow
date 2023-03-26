@@ -18,12 +18,14 @@ int main()
         int op, a = 10, b = 5;
         void(*ptr_calc[])(int, int) = {add, sub, mult};
 
-        printf("Enter operator, 0 for add, 1 for sub, 2 for mult");
+        printf("\nEnter operator, 0 for add, 1 for sub, 2 for mult\n");
         scanf("%d", &op);
 
-        if (op < 2)
-        return 0;
-
+        if (op > 2)
+        {
+                printf("\nWrong input\n");
+                return 0;
+        }
         ptr_calc[op](a, b);
 
 }
