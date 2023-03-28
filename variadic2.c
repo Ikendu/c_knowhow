@@ -4,11 +4,15 @@
 int sum(int count, ...);
 int main()
 {
-        int n1, n2;
-        n1 = sum(3, 50, 10, 10);
+        int n1, n2, numbs;
+        //n1 = sum(3, 50, 10, 10);
+        //n2 = sum(4, 80, 100, 50, 100);
+        printf("How many numbers do u want to add? \n");
+        scanf("%d", &numbs);
 
-        n2 = sum(4, 80, 100, 50, 100);
-        printf("\n the sum is %d and %d \n", n1, n2);
+        n1 = sum(numbs, 20, 10, 50, 30);
+
+        printf("\n the sum is %d", n1);
 
         return (0);
 }
