@@ -33,19 +33,21 @@ int main()
 
         printf("The size u enter is %d and the array contains \n", n);
 
-        int *arr = calloc(n, sizeof(int));
+        int *A = calloc(n, sizeof(int));
         for ( i = 0; i < n; i++)
         {
-                arr[i] = i + 1;
+                A[i] = i + 1;
         }
-        free(arr);
-        arr[4] = 100;
-        arr[0] = 10;
-        arr[1] = 20;
+        /*free(arr);
+          arr[4] = 100;
+          arr[0] = 10;
+          arr[1] = 20; */
 
-        for (i = 0; i < n; i++)
+        int *B = realloc(A, (2 * n * sizeof(int)));
+
+        for (i = 0; i < 2*n; i++)
         {
-                printf(" %d ", arr[i]);
+                printf(" %d\n", B[i]);
         }
-
+        printf("The address of A and B are %d and %d", A, B);
 }
