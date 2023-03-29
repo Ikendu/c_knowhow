@@ -33,11 +33,15 @@ int main()
 
         printf("The size u enter is %d and the array contains \n", n);
 
-        int *arr = malloc(n * sizeof(int));
+        int *arr = calloc(n, sizeof(int));
         for ( i = 0; i < n; i++)
         {
                 arr[i] = i + 1;
         }
+        free(arr);
+        arr[4] = 100;
+        arr[0] = 10;
+        arr[1] = 20;
 
         for (i = 0; i < n; i++)
         {
