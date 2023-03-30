@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+//#include <math.h>
 
 int compare(const void* a, const void* b)
 {
         int A = *((int*) a);
         int B = *((int*) b);
-        return A - B;
+        return abs(A) - abs(B);
 }
 
 int main()
@@ -15,5 +15,5 @@ int main()
 
         qsort(A, 6, sizeof(int), compare);
         for (i = 0; i < 6; i++)
-            printf("%d \n", A[i]);
+            printf("% d \n", A[i]);
 }
