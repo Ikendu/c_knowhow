@@ -15,5 +15,5 @@ int main()
 
         qsort(A, 6, sizeof(int), compare);
         for (i = 0; i < 6; i++)
-            printf("% d \n", A[i]);
+            printf("%  d \n", A[i]);
 }
