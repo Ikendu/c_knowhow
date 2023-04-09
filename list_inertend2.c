@@ -44,16 +44,18 @@ struct node
         int data;
         struct node *next;
 };
+
 struct node* add_end(struct node *head, int data)
 {
         struct node *temp = malloc(sizeof(struct node));
         temp->data = data;
         temp->next = NULL;
+
         head->next = temp;
 
-        //ptr = ptr->next;
         return temp;
 }
+
 int main()
 {
         struct node *head = malloc(sizeof(struct node));
