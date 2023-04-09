@@ -4,6 +4,9 @@
 int main()
 {
         FILE *fp;
+        char str[] = "How are you doing";
+        int i;
+
         fp = fopen("myfilez.txt", "w");
 
         fprintf(fp, "%s\n%s\n%s\n%s\n", "I love my wife and my Gift.", "She get plenty sense and she is beautiful.",
@@ -16,6 +19,12 @@ int main()
          {
                  printf("The file system failed");
          }
+
+         for (i = 0; i != str[i]; i++)
+         {
+                 fputc(str[i], fp);
+         }
+
 
 
         fclose(fp);
