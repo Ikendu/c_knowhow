@@ -3,6 +3,8 @@
 void insert_data(int arr[], int arr2[], int n, int data, int pos)
 {
         int i, j, index;
+        if (pos == 0)
+        printf("there is no 0 position");
         index = pos-1;
         for (i = 0; i <= index-1; i++ )
         {
@@ -22,7 +24,7 @@ int main()
         int i;
         int arr2[size+1];
 
-        insert_data(arr, arr2, size, 100, 6);
+        insert_data(arr, arr2, size, 100, 8);
 
         for (i = 0; i < size+1; i++)
         printf("%d \n", arr2[i]);
