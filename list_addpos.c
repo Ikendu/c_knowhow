@@ -6,6 +6,7 @@ struct node
         int data;
         struct node *next;
 };
+
 void add_node(struct node *head, int data)
 {
         struct node *newN = malloc(sizeof(struct node));
@@ -18,13 +19,14 @@ void add_node(struct node *head, int data)
         }
         head->next = newN;
 }
+
 void add_pos(struct node *head, int data, int pos)
 {
         struct node *newN = malloc(sizeof(struct node));
         newN->data = data;
         newN->next = NULL;
 
-        pos--;
+        //pos--;
         while (pos != 2)
         {
                 head = head->next;
@@ -33,6 +35,7 @@ void add_pos(struct node *head, int data, int pos)
         newN->next = head->next;
         head->next = newN;
 }
+
 int main()
 {
         struct node *head = malloc(sizeof(struct node));
@@ -43,7 +46,7 @@ int main()
         add_node(head, 50);
         add_node(head, 55);
 
-        add_pos(head, 90, 3);
+        add_pos(head, 90, 4);
 
         while (head != NULL)
         {
