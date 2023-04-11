@@ -1,34 +1,33 @@
 #include <stdio.h>
 
-//insert at any position of an array
-
-int insert_pos(int arr[], int arr2[], int n, int data, int pos)
+void insert_data(int arr[], int arr2[], int n, int data, int pos)
 {
-        int i, j, index = pos-1;
-
-        for (i = 0; i <= index-1; i++)
+        int i, j, index;
+        index = pos-1;
+        for (i = 0; i <= index-1; i++ )
         {
                 arr2[i] = arr[i];
         }
         arr2[index] = data;
 
-        for (i = index+1, j = index; i < n+1, j < n; i++, j++)
+        for (i = index, j = index+1; i < n, j < n+1; i++, j++)
         {
-                arr2[i] = arr[j];
+                arr2[j] = arr[i];
         }
 }
-
 int main()
 {
-        int arr[] = {2, 4, 19, 30, 6, 20, 14, 8, 9, 10};
-        int i;
+        int arr[] = {1, 10, 11, 12, 22, 33, 50, 60, 70, 71};
         int size = sizeof(arr)/sizeof(arr[0]);
+        int i;
         int arr2[size+1];
-        
-        insert_pos(arr, arr2, size, 100, 9);
+
+        insert_data(arr, arr2, size, 100, 6);
 
         for (i = 0; i < size+1; i++)
-        {
-                printf("%d \n", arr2[i]);
-        }
+        printf("%d \n", arr2[i]);
+
+        return (0);
+
+
 }
