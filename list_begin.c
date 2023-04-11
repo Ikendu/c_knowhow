@@ -8,13 +8,12 @@ struct node
 };
 struct node* add_begin(struct node *head, int data)
 {
-        struct node *temp = malloc(sizeof(struct node));
-        temp->data = data;
-        temp->next = NULL;
+        struct node *new = malloc(sizeof(struct node));
+        new->data = data;
+        new->next = NULL;
 
-        temp->next = head;
-        head = temp;
-
+        new->next = head;
+        head = new;
         return head;
 }
 
