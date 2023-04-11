@@ -18,15 +18,15 @@ void print_list(struct node *head)
 
 void add_list(struct node *head, int data)
 {
-        struct node *new = malloc(sizeof(struct node));
-        new->data = data;
-        new->link = NULL;
+        struct node *newN = malloc(sizeof(struct node));
+        newN->data = data;
+        newN->link = NULL;
 
         while (head->link != NULL)
         {
                 head = head->link;
         }
-        head->link = new;
+        head->link = newN; 
 }
 
 int main()

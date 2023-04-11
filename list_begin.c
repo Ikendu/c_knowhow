@@ -14,7 +14,7 @@ struct node* add_begin(struct node *head, int data)
 
         new->next = head;
         head = new;
-        return head;
+
 }
 
 int main()
