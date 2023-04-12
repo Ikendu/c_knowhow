@@ -10,15 +10,19 @@ struct node
 void del_last(struct node *head)
 {
         struct node *ptr = head;
-        struct node *ptr2 = head;
 
-        while (ptr->next != NULL)
+        while (head->next != NULL)
         {
-                ptr2 = ptr
+                ptr = head;
+                head = head->next;
         }
+        ptr->next = NULL;
+        free(head);
+        ptr = NULL;
+
 }
 
-void new_node(strunct node *head, int data)
+void new_node(struct node *head, int data)
 {
         struct node *new = malloc(sizeof(struct node));
         new->data = data;
@@ -37,6 +41,12 @@ int main()
         head->next = NULL;
 
         new_node(head, 90);
+        new_node(head, 10);
+        new_node(head, 37);
+        new_node(head, 95);
+        new_node(head, 65);
+
+        del_last(head);
 
         while (head != NULL)
         {
