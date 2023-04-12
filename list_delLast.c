@@ -14,6 +14,7 @@ void del_last(struct node *head)
 
         while (ptr->next != NULL)
         {
+                ptr2 = ptr
         }
 }
 

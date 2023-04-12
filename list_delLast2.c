@@ -4,12 +4,12 @@
 struct node
 {
         int data;
-        struct node next;
+        struct node *next;
 };
 
 void add_node(struct node *head, int data)
 {
-        struct node new = malloc(sizeof(struct node));
+        struct node *new = malloc(sizeof(struct node));
         new->data = data;
         new->next = NULL;
 
@@ -27,10 +27,10 @@ void del_last(struct node *head)
         while (temp->next != NULL)
         {
                 temp2 = temp;
-                temp = temp.next;
+                temp = temp->next;
         }
         temp2->next = NULL;
-        free(temp)
+        free(temp);
         temp = NULL;
 
         return (0);
@@ -42,7 +42,11 @@ int main()
         head->data = 67;
         head->next = NULL;
 
-        head = del_last(head);
+        add_node(head, 69);
+        add_node(head, 90);
+        add_node(head, 92);
+
+        del_last(head);
 
         while (head != NULL)
         {
