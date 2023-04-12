@@ -16,7 +16,7 @@ int del_first(int arr[], int n)
 }
 int main()
 {
-        int i, n, arr[5];
+        int i, n, arr[6];
 
         printf("Enter the number of elements < 6\n");
         scanf("%d", &n);
@@ -24,9 +24,12 @@ int main()
         printf("Enter the element one after the other\n");
         for (i = 0; i < n; i++)
         {
-                scanf("%d \n", &arr[i]);
+                scanf("%d", &arr[i]);
         }
-        for(i = 0; i < n-1; i++)
+
+        n = del_first(arr, 5);
+        printf("The number entered in array minus the last are\n");
+        for(i = 0; i < n; i++)
         {
                 printf("%d\n", arr[i]);
         }
