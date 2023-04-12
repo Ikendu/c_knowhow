@@ -9,18 +9,27 @@ struct node
 
 void del_last(struct node *head)
 {
-        struct node *ptr = head;
-
-        while (head->next != NULL)
-        {
-                ptr = head;
-                head = head->next;
+       if (head == NULL)
+       printf("The list is empty");
+       else if (head->next == NULL)
+       {
+               free(head);
+               head = NULL;
+       }
+       else
+       {
+               struct node *ptr = head;
+               while (head->next != NULL)
+               {
+                       ptr = head;
+                       head = head->next;
+               }
+                       ptr->next = NULL;
+                       free(head);
+                       ptr = NULL;
         }
-        ptr->next = NULL;
-        free(head);
-        ptr = NULL;
-
 }
+
 
 void new_node(struct node *head, int data)
 {
