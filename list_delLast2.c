@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//using a single pointer
+
 struct node
 {
         int data;
