@@ -11,4 +11,5 @@ int main()
 
         for (i = 0; i < size; i++)
         printf("%d \n", arry[i]);
+        return (0);
 }
