@@ -28,7 +28,7 @@ struct node* del_all(struct node *head)
                 free(head);
                 head = temp;
         }
-        return (temp);
+        return (head);
 }
 int main()
 {
@@ -41,7 +41,7 @@ int main()
         new_node(head, 89);
         new_node(head, 23);
 
-        //head = del_all(head);
+        head = del_all(head);
 
         if (head == NULL)
         printf("The whole list is deleted");
