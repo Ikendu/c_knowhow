@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 struct node
 {
@@ -8,10 +9,7 @@ struct node
 
 void insert_end(struct node *head, int data)
 {
-        struct node *new;
-
-        //ptr = head;
-        new = malloc(sizeof(struct node));
+        struct node *new = malloc(sizeof(struct node));
         new->data = data;
         new->next = NULL;
 
@@ -24,8 +22,6 @@ void insert_end(struct node *head, int data)
 
 void print_list(struct node *head)
 {
-        //struct node *getp;
-        //getp = head;
         while (head != NULL)
         {
                 printf("%d\n", head->data);
