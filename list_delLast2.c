@@ -24,7 +24,7 @@ void add_node(struct node *head, int data)
 void del_last(struct node *head)
 {
         struct node *temp = head;
-
+        
         while (temp->next->next != NULL)
         {
                 temp = temp->next;
@@ -32,8 +32,6 @@ void del_last(struct node *head)
         temp->next = NULL;
         free(temp->next);
         temp = NULL;
-
-        return (0);
 }
 /*
 void del_last(struct node *head)
@@ -65,6 +63,7 @@ int main()
         add_node(head, 92);
         add_node(head, 50);
 
+        del_last(head);
         del_last(head);
 
         while (head != NULL)
