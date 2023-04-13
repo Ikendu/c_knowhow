@@ -3,12 +3,12 @@
 struct node
 {
         int data;
-        struct node next;
+        struct node *next;
 };
 void new_node(struct node *head, int data)
 {
         struct node *new = malloc(sizeof(struct node));
-        new->data = 50;
+        new->data = data;
         new->next = NULL;
 
         while (head->next != NULL)
@@ -49,8 +49,12 @@ int main()
         head->data = 57;
         head->next = NULL;
 
-        new_node(head, 67)
-        del_pos(&head, 3);
+        new_node(head, 67);
+        new_node(head, 68);
+        new_node(head, 63);
+        new_node(head, 62);
+        
+        //del_pos(&head, 3);
 
         while (head != NULL)
         {
