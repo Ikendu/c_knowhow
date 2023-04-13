@@ -43,6 +43,7 @@ void del_pos(struct node **head, int pos)
                 curr = NULL;
         }
 }
+
 int main()
 {
         struct node *head = malloc(sizeof(struct node));
