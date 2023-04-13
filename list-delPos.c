@@ -19,20 +19,20 @@ void new_node(struct node *head, int data)
 }
 void del_pos(struct node **head, int pos)
 {
-        struct node *curr = head;
-        struct node *prev = head;
+        struct node *curr = *head;
+        struct node *prev = *head;
 
         if (*head == NULL)
         printf("The node is empty \n");
-        else if (*head == 1)
+        else if (pos == 1)
         {
-                head = prev->next;
-                free(head);
-                head = NULL;
+                *head = curr->next;
+                free(curr);
+                curr = NULL;
         }
         else
         {
-                while (head != 1)
+                while (pos != 1)
                 {
                         prev = curr;
                         curr = curr->next;
@@ -54,7 +54,7 @@ int main()
         new_node(head, 63);
         new_node(head, 62);
         
-        //del_pos(&head, 3);
+        del_pos(&head, 2);
 
         while (head != NULL)
         {
