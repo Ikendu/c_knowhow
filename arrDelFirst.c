@@ -6,13 +6,13 @@ int del_first(int arr[], int n)
         if (n == 0)
         {
                 printf("the array is empty \n");
-                return (0);
+                return (n);
         }
         for (i = 0; i < n-1; i++)
         {
                 arr[i] = arr[i + 1];
         }
-        return (n - 1);
+        return (n-1);
 }
 int main()
 {
