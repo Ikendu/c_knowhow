@@ -1,15 +1,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-struct node
+typedef struct node //using typedef
 {
         int data;
         struct node *link;
-};
-struct node* reverse(struct node *head)
+}Node;
+Node* reverse(Node *head)
 {
-        struct node *prev = NULL;
-        struct node *next = NULL;
+        Node *prev = NULL;
+        Node *next = NULL;
 
         while (head != NULL)
         {
@@ -21,7 +21,7 @@ struct node* reverse(struct node *head)
         head = prev;
         return (head);
 }
-void new_node(struct node *head, int data)
+void new_node(Node *head, int data)
 {
         struct node *new = malloc(sizeof(struct node));
         new->data = data;
@@ -35,7 +35,7 @@ void new_node(struct node *head, int data)
 }
 int main()
 {
-        struct node *head = malloc(sizeof(struct node));
+        Node *head = malloc(sizeof(struct node));
         head->data = 40;
         head->link = NULL;
 
