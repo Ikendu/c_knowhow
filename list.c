@@ -14,7 +14,7 @@ void node_counter(struct node *head)
         printf("The link list is empty \n");
         struct node *ptr;
         ptr = head;
-        while (ptr != 0)
+        while (ptr)
         {
                 printf("we are in node %d \n", ptr->data);
                 ptr = ptr->next;

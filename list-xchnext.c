@@ -23,21 +23,20 @@ void exchange(Node *head)
         Node *p, *q;
         int temp;
 
-        //if(!head || !head->next) s
-        if (head == NULL || head->next == NULL)
+        if(!head || !head->next)
         return;
+
         p = head;
         q = head->next;
-
-        while (q)
+        while(q)
         {
                 temp = p->data;
                 p->data = q->data;
                 q->data = temp;
 
                 p = q->next;
-
                 q = p? p->next : 0;
+
         }
 }
 int main()
