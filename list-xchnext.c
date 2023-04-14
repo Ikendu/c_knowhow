@@ -23,7 +23,8 @@ void exchange(Node *head)
         Node *p, *q;
         int temp;
 
-        if (!head || !head->next)
+        //if(!head || !head->next) s
+        if (head == NULL || head->next == NULL)
         return;
         p = head;
         q = head->next;
