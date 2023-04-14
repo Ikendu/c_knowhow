@@ -23,7 +23,7 @@ Node* reverse(Node *head)
 }
 void new_node(Node *head, int data)
 {
-        struct node *new = malloc(sizeof(struct node));
+        struct node *new = malloc(sizeof(Node));
         new->data = data;
         new->link = NULL;
 

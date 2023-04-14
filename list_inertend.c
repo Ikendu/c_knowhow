@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct node
+//using dypedef can make things so easy and code shorter
+typedef struct node
 {
         int data;
         struct node *next;
