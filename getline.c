@@ -7,6 +7,7 @@ int main(void)
 
 	//char *buff = NULL
 	//this allocate a whole line of 120 characters
+	//as a momory space  
 	char *buff = malloc(sizeof(size_t));
 	printf("Enter your name\n");
 	getline(&buff, &n, stdin);
