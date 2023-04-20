@@ -12,6 +12,10 @@ int main()
 	pid = fork();
 	ppid = getppid();
 
+	//sleep is used to make some part of code wait for other part 
+	//before execution
+	//This prevents situations like sumbi of orphan child
+
 	if(pid == -1)
 	{
 		printf("unsuccessfull\n");
