@@ -5,7 +5,10 @@
 
 int main()
 {
-	//fork is added to use wait
+	/**
+	 * execve - for executing command line statements
+	 * fork is added to use wait
+	 */
 	pid_t pid = fork();
 
 	char *argv[] = {"/bin/ls", NULL}; 
