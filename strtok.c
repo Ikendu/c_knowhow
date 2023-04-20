@@ -4,6 +4,9 @@
 
 int main(void)
 {
+	/**
+	 * strtok divides the strings into tokens using a delimiter
+	 */
 	char *src = {"I am becoming greater and I can feel its"};
 	char *str = malloc(sizeof(str));
 	char *delim = " ";
