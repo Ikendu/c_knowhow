@@ -7,6 +7,10 @@ int main(void)
 	/**
 	 * strtok divides the strings into tokens using a delimiter
 	 */
+	/* char str[] = {"I am becoming greater and I can feel its"};
+	 * no strcpy()
+	 */
+
 	char *src = {"I am becoming greater and I can feel its"};
 	char *str = malloc(sizeof(str));
 	char *delim = " ";
