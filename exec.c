@@ -5,6 +5,7 @@
 
 int main()
 {
+	//fork is added to use wait
 	pid_t pid = fork();
 
 	char *argv[] = {"/bin/ls", NULL}; 
@@ -17,6 +18,8 @@ int main()
        }
 	else
 	{
+		//wait add to make sure the printout show
+		//if-else statement is also used
 		wait(NULL);
 		printf("We are done\n");
 	}
