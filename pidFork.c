@@ -12,6 +12,7 @@ int main()
 	pid = fork();
 	ppid = getppid();
 
+	//this function create child process from parents
 	//sleep is used to make some part of code wait for other part 
 	//before execution
 	//This prevents situations like sumbi of orphan child
