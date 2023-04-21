@@ -18,7 +18,16 @@ int main(void)
 
 	cmd_cpy = strdup(cmd);
 	
-	while (cmd[i])
+	token = strtok(cmd, delim);
+	while (token)
+	{
+		token = strtok(NULL, delim);
+			argc++;
+	}
+	printf("%d\n", argc);
+
+
+/*	while (cmd[i])
 	{
 		if (cmd[i] == '\n')
 			printf(" we have %ld character here", strlen(cmd));
@@ -26,5 +35,6 @@ int main(void)
 			printf("%c", cmd[i]);
 		i++;
 	}
+*/
 	return (0);
 }
