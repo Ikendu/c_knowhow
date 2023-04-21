@@ -21,7 +21,7 @@ int main(void)
 	while (cmd[i])
 	{
 		if (cmd[i] == '\n')
-			printf("we have %ld character here", strlen(cmd));
+			printf(" we have %ld character here", strlen(cmd));
 		else
 			printf("%c", cmd[i]);
 		i++;

@@ -12,8 +12,9 @@ int main(void)
 	 */
 
 	char *src = {"I am becoming greater and I can feel its"};
-	char *str = malloc(sizeof(str));
+	char *str = malloc(sizeof(char)* strlen(src));
 	char *delim = " ";
+	int argc = 0;
 
 	strcpy(str, src);	
 
@@ -22,7 +23,10 @@ int main(void)
 	{
 		printf("%s\n", show);
 		show = strtok(NULL, delim);
+		argc++;
 	}
+	printf("Number of words is %d\n", argc); 
+	
 	
 	return (0);
 }
