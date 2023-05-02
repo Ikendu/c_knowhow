@@ -47,7 +47,7 @@ int main(void)
          printf("Which year did you bought Ikendu car?\n");
           scanf("%d", &(*ptr).year);
         printf("What is the make?\n");
-          scanf("%s", &ptr -> make);
+          scanf("%s", ptr -> make);
         printf("What is the cost of the car?\n");
           scanf("%f", &(*ptr).cost);
         printf("What is the EngPower of the car?\n");

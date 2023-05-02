@@ -1,29 +1,21 @@
 #include <stdio.h>
 
-struct automobile{
+typedef struct automobile{
                 int year;
                 char make[10];
                 int engine_power;
                 float cost;
-        } merc, ikenga, ikendu, benz;
+        } STA;
 
-        struct automobile info = {
-                1990,
-                "mk2020",
-                8500,
-                1500
-        };
+ struct automobile info = { 1990, "mk2020", 8500, 1500};
 
-typedef struct automobile STA;
+//typedef struct automobile STA;
 
 STA structfunc(STA s);
 
 int main(void)
 {
         STA model;
-
-
-
 
         printf("The initial values for directions: \n");
         printf("Year: %d \n", info.year);
@@ -43,6 +35,7 @@ int main(void)
 
             return (0);
 }
+
 STA structfunc(STA s)
 {
          printf("Which year did you bought Ikendu car?\n");
