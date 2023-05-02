@@ -24,6 +24,14 @@ int addptr(struct Value *a)
 {
         printf("%d\n", a->m + a->n);
 }
+//returning structure variable from function
+struct Value edit(struct Value p)
+{
+       p.m++;
+       p.n += 5;
+
+        return p;
+}
 //the main function
 int main(void)
 {
@@ -42,8 +50,17 @@ int main(void)
         struct Value s2 = {22, 33};
         add(s1);
         add(s2);
+
         //passing pointers as arguments to pointers
         addptr(&s1);
         addptr(&s2);
+
+        //returning structure variable from function
+        s1 = edit(s1);
+        s2 = edit(s2);
+        add(s1);
+        add(s2);
+
+
        return 0;
 }
